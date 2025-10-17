@@ -1,0 +1,19 @@
+Написати консольний застосунок, який прийматиме на вхід аудіо файл у форматі WAV,
+1) розпізнаватиме текст у ньому (використовуйте AWS Transcribe),
+2) визначатиме мову (використати одну з Python бібліотек),
+3) настрій розпізнаного тексту (використати nltk сентімент аналізатор)
+4) надаватиме можливість пошуку певної фрази з розпізнаванням іменованих сутностей (використати spaCy з моделлю en_core_web_sm).
+
+Файл для тестування lab3.wav згенерований сервісом gTTS (Google text-to-speech)
+
+Інтерфейс:
+python <lab3_app>.py --audio-source lab3.wav --phrase <searched phrase>
+Результат:
+Transcription:
+...
+Language:
+...
+Sentiment:
+Negative/Neutral/Positive
+Phrase Found/Not found at position: ...
+Named entities: ...

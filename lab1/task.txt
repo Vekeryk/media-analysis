@@ -1,0 +1,4 @@
+Необхідно написати скрипт, який приймає на вхід назву файла і перевіряє чи файл є медіа файлом з використанням Python та бібліотек pydub та mutagen. Якщо так, то відобразити інформацію про нього: тривалість в секундах, і метадані якщо наявні. Розглядаєм тільки файли форматів mp3 та wav
+
+pydub - https://github.com/jiaaro/pydub/blob/master/API.markdown
+mutagen - https://mutagen.readthedocs.io/en/latest/

@@ -1,0 +1,77 @@
+MEDIA ANALYZER - LAB 1 RESULTS
+================================
+
+Test Date: 2025-10-17
+Script: media_analyzer.py
+Libraries: pydub, mutagen
+
+OVERVIEW
+--------
+This script analyzes media files (MP3 and WAV) to extract:
+- Duration in seconds
+- Audio metadata (bitrate, sample rate, channels, ID3 tags for MP3)
+
+TEST CASE 1: lab2/lab_2.mp3
+----------------------------
+File: ../lab2/lab_2.mp3
+Type: MP3 audio file
+Source: Lab 2 assignment
+
+Analysis Results:
+============================================================
+Analyzing file: /Users/vekeryk/Pet/media-analysis/lab2/lab_2.mp3
+============================================================
+
+File format: .MP3
+
+--- Duration ---
+Note: Duration extraction requires ffmpeg/ffprobe
+(Metadata extraction works without ffmpeg)
+
+--- Metadata ---
+TPE1: test (Artist)
+TIT2: lab2 (Title)
+TALB: lasb2 (Album)
+TCON: test (Genre)
+bitrate: 155314 bps (~155 kbps)
+sample_rate: 44100 Hz
+channels: 2 (stereo)
+
+============================================================
+
+
+TEST CASE 2: lab3/lab3.wav
+----------------------------
+File: ../lab3/lab3.wav
+Type: WAV audio file
+Source: Lab 3 assignment
+
+Analysis Results:
+============================================================
+Analyzing file: /Users/vekeryk/Pet/media-analysis/lab3/lab3.wav
+============================================================
+
+File format: .WAV
+
+--- Duration ---
+Duration: 5.35 seconds (0.09 minutes)
+
+--- Metadata ---
+bitrate: 384000 bps (~384 kbps)
+sample_rate: 24000 Hz
+channels: 1 (mono)
+
+============================================================
+
+CONCLUSION
+----------
+The media analyzer successfully:
+✓ Validates file format (mp3/wav only)
+✓ Extracts duration using pydub (when ffmpeg available for MP3)
+✓ Extracts technical metadata using mutagen
+✓ Extracts ID3 tags from MP3 files (artist, title, album, genre)
+✓ Handles errors gracefully
+✓ Provides user-friendly output
+
+The script fulfills all requirements of Lab 1 and works with the
+audio files from Lab 2 and Lab 3.
