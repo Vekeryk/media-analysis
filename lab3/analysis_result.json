@@ -1,0 +1,187 @@
+{
+  "transcript": "NASA has launched a new rocket. It was fantastic.",
+  "language": "en",
+  "language_confidence": 0.9999956797307942,
+  "sentiment": "Positive",
+  "sentiment_scores": {
+    "neg": 0.0,
+    "neu": 0.541,
+    "pos": 0.459,
+    "compound": 0.6249
+  },
+  "entities": [["NASA", "ORG"]],
+  "transcribe_result": {
+    "jobName": "transcribe-lab3-1760740642",
+    "accountId": "151006775894",
+    "status": "COMPLETED",
+    "results": {
+      "language_code": "en-US",
+      "language_identification": [
+        {
+          "code": "en-US",
+          "score": "0.9999"
+        },
+        {
+          "code": "de-DE",
+          "score": "0.0001"
+        },
+        {
+          "code": "pl-PL",
+          "score": "0.0001"
+        },
+        {
+          "code": "fr-FR",
+          "score": "0.0001"
+        },
+        {
+          "code": "uk-UA",
+          "score": "0.0001"
+        }
+      ],
+      "transcripts": [
+        {
+          "transcript": "NASA has launched a new rocket. It was fantastic."
+        }
+      ],
+      "items": [
+        {
+          "id": 0,
+          "type": "pronunciation",
+          "alternatives": [
+            {
+              "confidence": "0.99",
+              "content": "NASA"
+            }
+          ],
+          "start_time": "0.14",
+          "end_time": "0.8"
+        },
+        {
+          "id": 1,
+          "type": "pronunciation",
+          "alternatives": [
+            {
+              "confidence": "0.999",
+              "content": "has"
+            }
+          ],
+          "start_time": "0.8",
+          "end_time": "1.029"
+        },
+        {
+          "id": 2,
+          "type": "pronunciation",
+          "alternatives": [
+            {
+              "confidence": "1.0",
+              "content": "launched"
+            }
+          ],
+          "start_time": "1.029",
+          "end_time": "1.5"
+        },
+        {
+          "id": 3,
+          "type": "pronunciation",
+          "alternatives": [
+            {
+              "confidence": "1.0",
+              "content": "a"
+            }
+          ],
+          "start_time": "1.5",
+          "end_time": "1.73"
+        },
+        {
+          "id": 4,
+          "type": "pronunciation",
+          "alternatives": [
+            {
+              "confidence": "1.0",
+              "content": "new"
+            }
+          ],
+          "start_time": "1.73",
+          "end_time": "2.089"
+        },
+        {
+          "id": 5,
+          "type": "pronunciation",
+          "alternatives": [
+            {
+              "confidence": "1.0",
+              "content": "rocket"
+            }
+          ],
+          "start_time": "2.089",
+          "end_time": "3.029"
+        },
+        {
+          "id": 6,
+          "type": "punctuation",
+          "alternatives": [
+            {
+              "confidence": "0.0",
+              "content": "."
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "type": "pronunciation",
+          "alternatives": [
+            {
+              "confidence": "0.997",
+              "content": "It"
+            }
+          ],
+          "start_time": "3.329",
+          "end_time": "3.569"
+        },
+        {
+          "id": 8,
+          "type": "pronunciation",
+          "alternatives": [
+            {
+              "confidence": "1.0",
+              "content": "was"
+            }
+          ],
+          "start_time": "3.569",
+          "end_time": "3.89"
+        },
+        {
+          "id": 9,
+          "type": "pronunciation",
+          "alternatives": [
+            {
+              "confidence": "1.0",
+              "content": "fantastic"
+            }
+          ],
+          "start_time": "3.89",
+          "end_time": "5.19"
+        },
+        {
+          "id": 10,
+          "type": "punctuation",
+          "alternatives": [
+            {
+              "confidence": "0.0",
+              "content": "."
+            }
+          ]
+        }
+      ],
+      "audio_segments": [
+        {
+          "id": 0,
+          "transcript": "NASA has launched a new rocket. It was fantastic.",
+          "start_time": "0.0",
+          "end_time": "5.329",
+          "items": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        }
+      ]
+    }
+  }
+}
