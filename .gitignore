@@ -1,2 +1,9 @@
 venv
 CLAUDE.md
+.env
+*.env
+.aws/
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store

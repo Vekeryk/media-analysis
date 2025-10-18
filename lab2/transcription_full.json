@@ -1,0 +1,108 @@
+{
+  "jobName": "transcribe-lab_2-1760805533",
+  "accountId": "151006775894",
+  "status": "COMPLETED",
+  "results": {
+    "language_code": "uk-UA",
+    "language_identification": [
+      {
+        "code": "uk-UA",
+        "score": "1"
+      },
+      {
+        "code": "pl-PL",
+        "score": "0.0001"
+      },
+      {
+        "code": "de-DE",
+        "score": "0.0001"
+      },
+      {
+        "code": "fr-FR",
+        "score": "0.0001"
+      },
+      {
+        "code": "en-US",
+        "score": "0.0001"
+      }
+    ],
+    "transcripts": [
+      {
+        "transcript": "Привіт, як справи?"
+      }
+    ],
+    "items": [
+      {
+        "id": 0,
+        "type": "pronunciation",
+        "alternatives": [
+          {
+            "confidence": "0.986",
+            "content": "Привіт"
+          }
+        ],
+        "start_time": "0.039",
+        "end_time": "0.519"
+      },
+      {
+        "id": 1,
+        "type": "punctuation",
+        "alternatives": [
+          {
+            "confidence": "0.0",
+            "content": ","
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "type": "pronunciation",
+        "alternatives": [
+          {
+            "confidence": "0.825",
+            "content": "як"
+          }
+        ],
+        "start_time": "0.689",
+        "end_time": "1.0"
+      },
+      {
+        "id": 3,
+        "type": "pronunciation",
+        "alternatives": [
+          {
+            "confidence": "0.941",
+            "content": "справи"
+          }
+        ],
+        "start_time": "1.0",
+        "end_time": "1.36"
+      },
+      {
+        "id": 4,
+        "type": "punctuation",
+        "alternatives": [
+          {
+            "confidence": "0.0",
+            "content": "?"
+          }
+        ]
+      }
+    ],
+    "audio_segments": [
+      {
+        "id": 0,
+        "transcript": "Привіт, як справи?",
+        "start_time": "0.0",
+        "end_time": "1.549",
+        "items": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    ]
+  }
+}
