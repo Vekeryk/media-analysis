@@ -1,4 +1,6 @@
-Необхідно використовуючи AWS Free Tier план створити API сервіс з використанням AWS API Gateway, Lambda, Transcribe (або Deepgram) і S3.
+Необхідно використовуючи AWS Free Tier план створити API сервіс з використанням 
+AWS API Gateway, Lambda, Transcribe (або Deepgram) і S3.
+
 Інфраструктуру необхідно описати з використанням AWS CloudFormation. (Допускається використання AWS SAM).
 
 Інфраструктуру слід задеплоїти.

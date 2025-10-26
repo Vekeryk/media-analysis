@@ -1,0 +1,84 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: "Lab 4: Audio Transcription API"
+
+Globals:
+  Function:
+    Timeout: 60
+    MemorySize: 512
+    Runtime: python3.11
+    Environment:
+      Variables:
+        BUCKET_NAME: media-labs-audio-transcribe
+
+Resources:
+  # API Gateway
+  TranscribeAPI:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: media-labs-transcribe-api
+      StageName: prod
+      BinaryMediaTypes:
+        - "audio/*"
+        - "application/octet-stream"
+      Cors:
+        AllowMethods: "'POST, GET, OPTIONS'"
+        AllowHeaders: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key'"
+        AllowOrigin: "'*'"
+
+  # Lambda Function
+  TranscribeFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: media-labs-transcribe-api
+      CodeUri: .
+      Handler: lambda_function.lambda_handler
+      Description: "Audio transcription with AWS Transcribe"
+      Policies:
+        - AWSLambdaBasicExecutionRole
+        - S3CrudPolicy:
+            BucketName: media-labs-audio-transcribe
+        - Statement:
+            - Effect: Allow
+              Action:
+                - transcribe:StartTranscriptionJob
+                - transcribe:GetTranscriptionJob
+                - transcribe:ListTranscriptionJobs
+              Resource: "*"
+      Events:
+        # POST /transcribe - Start transcription
+        PostTranscribe:
+          Type: Api
+          Properties:
+            RestApiId: !Ref TranscribeAPI
+            Path: /transcribe
+            Method: post
+        # GET /transcribe/{job_name} - Check status
+        GetStatus:
+          Type: Api
+          Properties:
+            RestApiId: !Ref TranscribeAPI
+            Path: /transcribe/{job_name}
+            Method: get
+
+  # CloudWatch Log Group
+  TranscribeFunctionLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "/aws/lambda/${TranscribeFunction}"
+      RetentionInDays: 7
+
+Outputs:
+  ApiEndpoint:
+    Description: "API Gateway endpoint URL"
+    Value: !Sub "https://${TranscribeAPI}.execute-api.${AWS::Region}.amazonaws.com/prod/transcribe"
+    Export:
+      Name: TranscribeApiEndpoint
+
+  ApiId:
+    Description: "API Gateway ID"
+    Value: !Ref TranscribeAPI
+
+  LambdaFunctionArn:
+    Description: "Lambda Function ARN"
+    Value: !GetAtt TranscribeFunction.Arn
