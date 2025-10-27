@@ -1,0 +1,40 @@
+{
+  "exif": {
+    "Model": "Demo Camera",
+    "ExifOffset": "116",
+    "ImageDescription": "New York with EXIF metadata",
+    "Make": "Python Script",
+    "DateTimeOriginal": "2025-10-21"
+  },
+  "faces_detected": 4,
+  "faces": [
+    {
+      "id": 1,
+      "x": 250,
+      "y": 948,
+      "width": 64,
+      "height": 64
+    },
+    {
+      "id": 2,
+      "x": 1627,
+      "y": 1239,
+      "width": 79,
+      "height": 79
+    },
+    {
+      "id": 3,
+      "x": 1003,
+      "y": 1356,
+      "width": 56,
+      "height": 56
+    },
+    {
+      "id": 4,
+      "x": 410,
+      "y": 1336,
+      "width": 64,
+      "height": 64
+    }
+  ]
+}

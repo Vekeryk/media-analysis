@@ -1,0 +1,30 @@
+Lab 5: JPEG Image Analysis
+======================================================================
+Input: new_york.jpeg
+Output image: new_york_faces.jpg
+Output metadata: new_york_metadata.json
+======================================================================
+Validating JPEG file: new_york.jpeg
+✓ Valid JPEG: JPEG 3000x1821 RGB
+
+Extracting EXIF metadata...
+✓ Extracted 5 EXIF tags
+  Make: Python Script
+  Model: Demo Camera
+
+Detecting faces...
+✓ Detected 4 face(s)
+  Face 1: position=(250, 948), size=64x64
+  Face 2: position=(1627, 1239), size=79x79
+  Face 3: position=(1003, 1356), size=56x56
+  Face 4: position=(410, 1336), size=64x64
+
+✓ Annotated image saved to: new_york_faces.jpg
+
+✓ Metadata saved to: new_york_metadata.json
+
+======================================================================
+✓ Analysis Complete!
+======================================================================
+Faces detected: 4
+EXIF tags: 5
